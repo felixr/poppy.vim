@@ -29,7 +29,7 @@ function s:endpart(b)
   endif
 endfunction
 
-function poppy#init()
+function poppy#update()
   let s:pos = getpos('.')[1:2] | let w:poppies = get(w:,'poppies',[])
         \ | silent! call filter(w:poppies,'matchdelete(v:val)>0') | call s:highpat()
 endfunction
